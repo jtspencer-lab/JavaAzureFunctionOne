@@ -1,0 +1,32 @@
+
+
+Authentication failed against tenant ed9aa516-5358-4016-a8b2-b6ccb99142d0 '3Cloud Lab': SubError: basic_action V2Error: invalid_grant AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '797f4846-ba00-4fd7-ba43-dac1f8f63013'. Trace ID: 77497ec4-f860-406a-b2fb-22cd3d950100 Correlation ID: faa76dc9-9542-431f-ab6f-91ba9d865713 Timestamp: 2026-02-25 00:49:49Z. Status: Response_Status.Status_InteractionRequired, Error code: 3399614476, Tag: 557973645
+The following tenants don't contain accessible subscriptions. Use `az login --allow-no-subscriptions` to have tenant level access.
+7c55576f-e738-4097-8c71-053078eadf3f '3Cloud'
+If you need to access subscriptions in the following tenants, please use `az login --tenant TENANT_ID`.
+ed9aa516-5358-4016-a8b2-b6ccb99142d0 '3Cloud Lab'
+
+
+This was copilo recommended command
+
+
+az login --tenant ed9aa516-5358-4016-a8b2-b6ccb99142d0
+
+
+then for windows powershell in TERMINAL of Visual Code
+
+
+DIDNT WORK
+mvn archetype:generate \
+  -DarchetypeGroupId=com.microsoft.azure \
+  -DarchetypeArtifactId=azure-functions-archetype \
+  -DgroupId=com.example \
+  -DartifactId=namevalue-function \
+  -Dversion=1.0-SNAPSHOT \
+  -DjavaVersion=17 \
+  -DinteractiveMode=false
+  
+  
+  THIS FIANLLY WORK using command palette
+  
+  Executing task: "mvn org.apache.maven.plugins:maven-archetype-plugin:3.1.2:generate -DarchetypeArtifactId="azure-functions-archetype" -DarchetypeGroupId="com.microsoft.azure" -DarchetypeVersion="1.52" -DgroupId="com.example" -DartifactId="name_value_save_function"" 
