@@ -30,3 +30,45 @@ mvn archetype:generate \
   THIS FIANLLY WORK using command palette
   
   Executing task: "mvn org.apache.maven.plugins:maven-archetype-plugin:3.1.2:generate -DarchetypeArtifactId="azure-functions-archetype" -DarchetypeGroupId="com.microsoft.azure" -DarchetypeVersion="1.52" -DgroupId="com.example" -DartifactId="name_value_save_function"" 
+  
+  
+  
+  
+  //funtion app url
+  
+  java-function-one-apaagsc3cfbxg7cn.westus-01.azurewebsites.net
+  
+  
+  azure resources
+
+
+subscription
+ASD Lab
+
+resource group
+rg-jspencer-java
+
+function
+java-function-one
+
+//run this to get funtion app and service namevalue-function
+az functionapp list --resource-group rg-jspencer-java --query "[].{name:name, appServicePlan:appServicePlanId}" -o table
+
+
+az functionapp show --name java-function-one --resource-group rg-jspencer-java --query siteConfig.linuxFxVersion
+
+
+---Timestamp
+exploring how to deploy a java based endpoint to azure functions, goiung through all the create resource and function app in azure and configuring visual code and maven to build and deploy.
+
+
+---------------- HOW TO DEPLOY
+
+
+in folder with POM in terminal
+
+az login
+
+mvn clean package
+
+mvn azure-functions:deploy
